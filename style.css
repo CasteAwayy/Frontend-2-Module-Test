@@ -153,9 +153,22 @@ span:first-child {
 }
 
 @media screen and (max-width: 1000px) {
+  body{
+    padding: 40px 15px;
+  }
+  .user-data{
+    width: 80%;
+    grid-template-columns: 30px repeat(2,1fr) 60px;
+    font-size: 12px;
+  }
   .data {
     flex-basis: 100%;
     margin: 10px 0;
+  }
+  .btn-delete {
+    padding: 5px 10px;
+    border-radius: var(--btn-radius);
+    white-space: nowrap;
   }
   input {
     width: calc(100% - 40px);
