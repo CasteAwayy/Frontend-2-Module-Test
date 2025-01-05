@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Frontend 2 Module Test</title>
+  </head>
+  <body>
+    <div class="employee-details">
+      <h2>New Employees</h2>
+      <form class="form">
+        <div class="data">
+          <label for="name">Enter Name</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="data">
+          <label for="name">Enter Profession</label>
+          <input type="text" id="profession" name="profession" />
+        </div>
+        <div class="data">
+          <label for="name">Enter Age</label>
+          <input type="number" id="age" name="age" />
+        </div>
+
+        <button class="btn btn-add_user" type="submit">Add User</button>
+      </form>
+      <span></span>
+    </div>
+
+    <div class="added-data">
+      <h2>Added Employees</h2>
+      <span class="empty-list">You have 0 Employees.</span>
+      <div class="employee-container">
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

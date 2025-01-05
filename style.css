@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /*   ^clr scheme  */
+  --background-clr: #000000;
+  --primary-clr: #ffffff;
+  --secondary-clr: #ffffff80;
+  --error-clr: #ff4343;
+  --clear-clr: #43ff78;
+  --btn-radius: 20px;
+  --empl-radius: 10px;
+  --inpt-radius: 5px;
+}
+
+body {
+  padding: 60px 40px;
+  background-color: var(--background-clr);
+  color: var(--primary-clr);
+}
+
+.employee-details {
+  padding: 10px 0;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.data {
+  flex-basis: 33%;
+  flex-grow: 1;
+}
+
+.data label + input {
+  display: block;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+input {
+  width: 85%;
+  padding: 10px 20px;
+  border: 1px solid var(--primary-clr);
+  background-color: transparent;
+  border-radius: var(--inpt-radius);
+  margin: 10px 0 20px 0;
+  color: var(--primary-clr);
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.employee-details span {
+  display: block;
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: var(--primary-clr);
+  color: var(--background-clr);
+}
+
+.btn-add_user {
+  margin: 10px 0;
+  padding: 10px 50px;
+  font-weight: 300;
+}
+
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.added-data h2 {
+  margin: 5px 0 20px 0;
+}
+
+.empty-list {
+  color: var(--secondary-clr);
+}
+
+.employee-container {
+  width: 800px;
+  max-width: 100%;
+}
+
+.employee-data {
+  display: flex;
+  gap: 10px;
+  max-height: 50px;
+}
+
+.employee-data + .employee-data {
+  margin: 10px 0;
+}
+
+.user-data {
+  width: 100%;
+  border: 1px solid var(--primary-clr);
+  border-radius: var(--empl-radius);
+  padding: 10px 0;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 50px repeat(2, 1fr) 100px;
+  place-content: center;
+  gap: 5px;
+}
+
+.user-data span {
+  width: 100%;
+  text-align: left;
+}
+
+span:first-child {
+  margin: 0 0 0 15px;
+}
+
+.btn-delete {
+  margin: 5px 0;
+  padding: 10px 20px;
+  border-radius: var(--btn-radius);
+  white-space: nowrap;
+}
+
+.error {
+  color: var(--error-clr);
+}
+
+.clear {
+  color: var(--clear-clr);
+}
+
+@media screen and (max-width: 1000px) {
+  .data {
+    flex-basis: 100%;
+    margin: 10px 0;
+  }
+  input {
+    width: calc(100% - 40px);
+  }
+}
